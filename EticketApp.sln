@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EticketApp.Android", "Etick
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EticketApp.iOS", "EticketApp\EticketApp.iOS\EticketApp.iOS.csproj", "{D272517D-F047-41AE-AA94-10E04746DE37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EticketApp", "EticketApp\EticketApp\EticketApp.csproj", "{8064463C-560A-48C7-A837-7A4AD4DCA174}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EticketApp", "EticketApp\EticketApp\EticketApp.csproj", "{8064463C-560A-48C7-A837-7A4AD4DCA174}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
