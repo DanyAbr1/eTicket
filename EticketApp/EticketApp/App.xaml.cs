@@ -12,7 +12,7 @@ namespace EticketApp
         {
             InitializeComponent();
 
-            MainPage = new HomeView();
+            MainPage = new MainInformationView();
         }
 
         protected override void OnStart()

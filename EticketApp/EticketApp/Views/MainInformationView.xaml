@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EticketApp.Views.MainInformationView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <ScrollView>
+            <ScrollView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0.1" Color="#E4E8F9" />
+                    <GradientStop Offset="1.0" Color="#FAFCFF" />
+                </LinearGradientBrush>
+            </ScrollView.Background>
+            <Grid Padding="40" RowDefinitions="Auto,Auto,Auto,Auto">
+                <Frame BackgroundColor="#FFFFFF" />
+                <BoxView BackgroundColor="" />
+            </Grid>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
