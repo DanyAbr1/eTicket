@@ -9,7 +9,54 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <ScrollView />
+        <ScrollView>
+            <ScrollView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0.1" Color="#0D2F90" />
+                    <GradientStop Offset="1.0" Color="#070C5D" />
+                </LinearGradientBrush>
+            </ScrollView.Background>
+            <Grid RowDefinitions="Auto,*,Auto">
+
+
+                <StackLayout Margin="0,60,0,-50">
+                    <Label
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        Text="E-TICKET"
+                        TextColor="White" />
+
+                    <Label
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        Text="REPÚBLICA DOMINICANA"
+                        TextColor="White" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Padding="70">
+                    <Image Source="Escudo.PNG" />
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Row="2"
+                    Padding="50"
+                    Spacing="20">
+                    <Button
+                        BackgroundColor="#10439C"
+                        CornerRadius="25"
+                        Text="Solicitar E-Tickect"
+                        TextColor="White" />
+                    <Button
+                        Grid.Row="1"
+                        BackgroundColor="#D37228"
+                        CornerRadius="25"
+                        Text="Consultar E-Tickect"
+                        TextColor="White" />
+                </StackLayout>
+
+
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 
 </ContentPage>
