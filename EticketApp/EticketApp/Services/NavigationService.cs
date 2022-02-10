@@ -108,6 +108,8 @@ namespace EticketApp.Services
         void CreatePageViewModelMappings()
         {
             _mappings.Add(typeof(HomeViewModel), typeof(HomeView));
+            _mappings.Add(typeof(MainInformationViewModel), typeof(MainInformationView));
+            _mappings.Add(typeof(GeneralInformationViewModel), typeof(GeneralInformationView));
 
         }
     }

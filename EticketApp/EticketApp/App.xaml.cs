@@ -1,8 +1,5 @@
-﻿using EticketApp.ViewModels;
-using EticketApp.Views;
-using System;
+﻿using EticketApp.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace EticketApp
 {
@@ -12,7 +9,7 @@ namespace EticketApp
         {
             InitializeComponent();
 
-            MainPage = new MainInformationView();
+            MainPage = new NavigationPage(new HomeView());
         }
 
         protected override void OnStart()

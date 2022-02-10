@@ -2,8 +2,24 @@
 <ContentPage
     x:Class="EticketApp.Views.MainInformationView"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:EticketApp.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:MainInformationViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelInfo" TargetType="Label">
+                <Setter Property="FontFamily" Value="Rockolf Bold" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="TextTransform" Value="None" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
+
         <ScrollView>
             <ScrollView.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -11,12 +27,76 @@
                     <GradientStop Offset="1.0" Color="#FAFCFF" />
                 </LinearGradientBrush>
             </ScrollView.Background>
-            <Grid Padding="40" RowDefinitions="Auto,Auto,Auto,Auto">
-                <Frame BackgroundColor="#FFFFFF" />
-                <BoxView
-                    BackgroundColor="Red"
-                    CornerRadius="10"
-                    HeightRequest="20" />
+            <Grid
+                Padding="10"
+                RowDefinitions="Auto,Auto,Auto,Auto"
+                RowSpacing="20"
+                VerticalOptions="CenterAndExpand">
+
+                <Frame Grid.Row="0" CornerRadius="15">
+                    <StackLayout HeightRequest="70">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GeneralInformationCommand}" />
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="PASO 1" />
+                        <Label Style="{StaticResource LabelInfo}" Text="INFORMACIÓN GENERAL" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" CornerRadius="15">
+                    <StackLayout HeightRequest="70">
+                        <Label Text="PASO 2" />
+                        <Label Style="{StaticResource LabelInfo}" Text="INFORMACIÓN MIGRATORIA" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="2" CornerRadius="15">
+                    <StackLayout HeightRequest="70">
+                        <Label Text="PASO 3" />
+                        <Label Style="{StaticResource LabelInfo}" Text="INFORMACIÓN ADUANAL" />
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="3" CornerRadius="15">
+                    <StackLayout HeightRequest="70">
+                        <Label Text="PASO 4" />
+                        <Label Style="{StaticResource LabelInfo}" Text="SALUD PÚBLICA" />
+                    </StackLayout>
+                </Frame>
+
+                <!--<Frame Grid.Row="1" BackgroundColor="#FFFFFF">
+                    <StackLayout HeightRequest="50">
+                        <Ellipse
+                            HeightRequest="150"
+                            HorizontalOptions="Start"
+                            Stroke="Red"
+                            StrokeThickness="4"
+                            WidthRequest="150" />
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Row="2" BackgroundColor="#FFFFFF">
+                    <StackLayout HeightRequest="50">
+                        <Ellipse
+                            HeightRequest="150"
+                            HorizontalOptions="Start"
+                            Stroke="Red"
+                            StrokeThickness="4"
+                            WidthRequest="150" />
+                    </StackLayout>
+                </Frame>
+                <Frame Grid.Row="3" BackgroundColor="#FFFFFF">
+                    <StackLayout HeightRequest="50">
+                        <Ellipse
+                            HeightRequest="150"
+                            HorizontalOptions="Start"
+                            Stroke="Red"
+                            StrokeThickness="4"
+                            WidthRequest="150" />
+                    </StackLayout>
+                </Frame>-->
+
+
+
             </Grid>
         </ScrollView>
 

@@ -43,6 +43,7 @@
                     Spacing="20">
                     <Button
                         BackgroundColor="#10439C"
+                        Command="{Binding MainInformationCommand}"
                         CornerRadius="25"
                         Text="Solicitar E-Tickect"
                         TextColor="White" />

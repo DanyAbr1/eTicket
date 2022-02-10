@@ -10,11 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace EticketApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainInformationView : ContentPage
+    public partial class GeneralInformationView : ContentPage
     {
-        public MainInformationView()
+        public GeneralInformationView()
         {
             InitializeComponent();
+
             NavigationPage.SetHasNavigationBar(this, false);
         }
     }

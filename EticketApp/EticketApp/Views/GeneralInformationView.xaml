@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EticketApp.Views.GeneralInformationView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ctrl="clr-namespace:EticketApp.Controls"
+    xmlns:pk="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:vm="clr-namespace:EticketApp.ViewModels">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+
+            <Style TargetType="ctrl:StandardEntry">
+                <Setter Property="Margin" Value="0,15" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="PlaceholderColor" Value="Gray" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BackgroundColor" Value="#F6FBFF" />
+                <Setter Property="BorderColor" Value="#009CFF" />
+
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <vm:GeneralInformationViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid RowDefinitions="200,*,Auto">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0.1" Color="#0D2F90" />
+                    <GradientStop Offset="1.0" Color="#070C5D" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Label
+                Margin="10"
+                FontSize="20"
+                HorizontalOptions="Start"
+                Text="Por favor suministrar toda la información necesaria. Si necesita tiene alguna favor contactenos."
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+
+            <pk:PancakeView
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                BackgroundColor="#FFFFFF"
+                CornerRadius="30,30,0,0">
+                <ScrollView>
+                    <Grid RowDefinitions="*,Auto">
+                        <StackLayout Padding="15">
+                            <ctrl:StandardEntry Placeholder="Nombre" />
+                            <ctrl:StandardEntry Placeholder="Apellido" />
+                            <Label Text="Fecha de Nacimiento" TextColor="Black" />
+                            <DatePicker
+                                Date="01/01/2000"
+                                Format="dd/MM/yyyy"
+                                TextColor="Gray" />
+                            <ctrl:StandardEntry Placeholder="Cédula" />
+                            <ctrl:StandardEntry Placeholder="Direción de Recidencia" />
+                            <ctrl:StandardEntry Placeholder="Ciudad" />
+                            <ctrl:StandardEntry Placeholder="País de Recidencia" />
+                            <ctrl:StandardEntry Placeholder="Estado" />
+                            <ctrl:StandardEntry Placeholder="Salir o Entrar" />
+                            <ctrl:StandardEntry Keyboard="Numeric" Placeholder="Código Postal" />
+                        </StackLayout>
+
+                    </Grid>
+                </ScrollView>
+            </pk:PancakeView>
+            <StackLayout Grid.Row="2" Padding="10">
+                <ImageButton
+                    Padding="10"
+                    Aspect="AspectFill"
+                    BackgroundColor="#55B155"
+                    CornerRadius="30"
+                    HeightRequest="60"
+                    HorizontalOptions="End"
+                    Source="Guardar.png"
+                    WidthRequest="60" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
