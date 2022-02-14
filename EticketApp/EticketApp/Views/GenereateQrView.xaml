@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup
+    x:Class="EticketApp.Views.GenereateQrView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+    xmlns:zxingCommon="clr-namespace:ZXing.Common;assembly=zxing"
+    IsLightDismissEnabled="True"
+    Size="350,550">
+
+    <StackLayout>
+        <Label
+            FontAttributes="Bold"
+            FontFamily="Rockolf Bold"
+            FontSize="30"
+            HorizontalOptions="Center"
+            Text="Código de consulta"
+            TextColor="Black" />
+
+        <Label
+            x:Name="LblCodigo"
+            FontAttributes="Bold"
+            FontFamily="Rockolf Bold"
+            FontSize="30"
+            HorizontalOptions="Center" />
+
+        <zxing:ZXingBarcodeImageView
+            BarcodeValue="Demo de eTicket"
+            HeightRequest="500"
+            WidthRequest="500">
+            <zxing:ZXingBarcodeImageView.BarcodeOptions>
+                <zxingCommon:EncodingOptions Width="500" Height="500" />
+            </zxing:ZXingBarcodeImageView.BarcodeOptions>
+        </zxing:ZXingBarcodeImageView>
+
+        <Button
+            Padding="20"
+            Clicked="Button_Clicked"
+            HorizontalOptions="EndAndExpand"
+            Text="Cerrar" />
+    </StackLayout>
+</xct:Popup>

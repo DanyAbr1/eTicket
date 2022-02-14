@@ -63,40 +63,6 @@
                         <Label Style="{StaticResource LabelInfo}" Text="SALUD PÚBLICA" />
                     </StackLayout>
                 </Frame>
-
-                <!--<Frame Grid.Row="1" BackgroundColor="#FFFFFF">
-                    <StackLayout HeightRequest="50">
-                        <Ellipse
-                            HeightRequest="150"
-                            HorizontalOptions="Start"
-                            Stroke="Red"
-                            StrokeThickness="4"
-                            WidthRequest="150" />
-                    </StackLayout>
-                </Frame>
-                <Frame Grid.Row="2" BackgroundColor="#FFFFFF">
-                    <StackLayout HeightRequest="50">
-                        <Ellipse
-                            HeightRequest="150"
-                            HorizontalOptions="Start"
-                            Stroke="Red"
-                            StrokeThickness="4"
-                            WidthRequest="150" />
-                    </StackLayout>
-                </Frame>
-                <Frame Grid.Row="3" BackgroundColor="#FFFFFF">
-                    <StackLayout HeightRequest="50">
-                        <Ellipse
-                            HeightRequest="150"
-                            HorizontalOptions="Start"
-                            Stroke="Red"
-                            StrokeThickness="4"
-                            WidthRequest="150" />
-                    </StackLayout>
-                </Frame>-->
-
-
-
             </Grid>
         </ScrollView>
 
