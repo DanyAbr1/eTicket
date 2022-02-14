@@ -22,11 +22,11 @@ namespace EticketApp.Behaviors
 
             bool isValid = int.TryParse(args.NewTextValue, out result);
             
-            ((Entry)sender).TextColor = isValid ? Color.Default : Color.Red;
+            ((Entry)sender).TextColor = isValid ? Color.Black : Color.Red;
 
             if (args.NewTextValue.Contains("-"))
             {
-                ((Entry)sender).TextColor = Color.Default;
+                ((Entry)sender).TextColor = Color.Black;
             }
             
         }
