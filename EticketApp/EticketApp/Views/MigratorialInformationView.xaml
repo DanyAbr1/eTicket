@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EticketApp.Views.MigratorialInformationView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dxf="http://schemas.devexpress.com/xamarin/2014/forms/dataform"
+    xmlns:pk="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:vm="clr-namespace:EticketApp.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:MingratorialInformationViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid RowDefinitions="100,*,10">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0.1" Color="#0D2F90" />
+                    <GradientStop Offset="1.0" Color="#070C5D" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Label
+                Margin="10"
+                FontSize="20"
+                HorizontalOptions="Start"
+                Text="En esta sección se requerirá toda la información del pasajero principal"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+
+            <pk:PancakeView
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                BackgroundColor="#FFFFFF"
+                CornerRadius="30,30,0,0">
+                <ScrollView>
+                    <StackLayout>
+                        <dxf:DataFormView x:Name="dataForm" CommitMode="PropertyChanged" />
+                        <Button
+                            BackgroundColor="#0D2F90"
+                            Clicked="Button_Clicked"
+                            Text="Continuar"
+                            TextColor="White"
+                            VerticalOptions="EndAndExpand" />
+                    </StackLayout>
+                </ScrollView>
+            </pk:PancakeView>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -29,7 +29,7 @@
             </ScrollView.Background>
             <Grid
                 Padding="10"
-                RowDefinitions="Auto,Auto,Auto,Auto"
+                RowDefinitions="Auto,Auto,*"
                 RowSpacing="20"
                 VerticalOptions="CenterAndExpand">
 
@@ -45,12 +45,24 @@
 
                 <Frame Grid.Row="1" CornerRadius="15">
                     <StackLayout HeightRequest="70">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding MigratorialInformationCommand}" />
+                        </StackLayout.GestureRecognizers>
                         <Label Text="PASO 2" />
                         <Label Style="{StaticResource LabelInfo}" Text="INFORMACIÓN MIGRATORIA" />
                     </StackLayout>
                 </Frame>
 
-                <Frame Grid.Row="2" CornerRadius="15">
+
+                <Button
+                    Grid.Row="2"
+                    BackgroundColor="#0D2F90"
+                    Clicked="Button_Clicked"
+                    CornerRadius="15"
+                    Text="Generar Código QR"
+                    TextColor="White"
+                    VerticalOptions="EndAndExpand" />
+                <!--<Frame Grid.Row="2" CornerRadius="15">
                     <StackLayout HeightRequest="70">
                         <Label Text="PASO 3" />
                         <Label Style="{StaticResource LabelInfo}" Text="INFORMACIÓN ADUANAL" />
@@ -62,8 +74,9 @@
                         <Label Text="PASO 4" />
                         <Label Style="{StaticResource LabelInfo}" Text="SALUD PÚBLICA" />
                     </StackLayout>
-                </Frame>
+                </Frame>-->
             </Grid>
+
         </ScrollView>
 
     </ContentPage.Content>

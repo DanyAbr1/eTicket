@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.CommunityToolkit.UI.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace EticketApp.Views
@@ -9,7 +10,9 @@ namespace EticketApp.Views
         public GenereateQrView()
         {
             InitializeComponent();
-            
+            var json = Preferences.Get("MigratorialInfo", "");
+            qrtxt.BarcodeValue = json;
+
         }
 
         private void Button_Clicked(object sender, System.EventArgs e)

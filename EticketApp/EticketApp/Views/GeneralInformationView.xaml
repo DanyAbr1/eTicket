@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:Behavior="clr-namespace:EticketApp.Behaviors"
     xmlns:ctrl="clr-namespace:EticketApp.Controls"
+    xmlns:dxf="http://schemas.devexpress.com/xamarin/2014/forms/dataform"
     xmlns:pk="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     xmlns:vm="clr-namespace:EticketApp.ViewModels">
     <ContentPage.Resources>
@@ -37,9 +38,9 @@
 
             <Label
                 Margin="10"
-                FontSize="20"
+                FontSize="16"
                 HorizontalOptions="Start"
-                Text="Por favor suministrar toda la información necesaria. Si tiene alguna duda por favor contactenos."
+                Text="CÓDIGO DE APLICACIÓN : H6C0UY ESTE ES SU CÓDIGO DE APLICACIÓN PARA ACCEDER A SU FORMULARIO, POR FAVOR GUÁRDELO Y NO LO COMPARTA CON NADIE."
                 TextColor="White"
                 VerticalOptions="CenterAndExpand" />
 
@@ -48,8 +49,8 @@
                 Grid.RowSpan="2"
                 BackgroundColor="#FFFFFF"
                 CornerRadius="30,30,0,0">
-                <ScrollView Padding="0,0,0,50">
-                    <Grid RowDefinitions="*,Auto">
+                <ScrollView>
+                    <!--<Grid RowDefinitions="*,Auto">
                         <StackLayout Padding="15">
                             <ctrl:StandardEntry Placeholder="Nombre" />
                             <ctrl:StandardEntry Placeholder="Apellido" />
@@ -87,14 +88,25 @@
                                 <RadioButton Content="Salida de la Republica Dominicana" />
                             </StackLayout>
                         </StackLayout>
-                    </Grid>
+                    </Grid>-->
+
+                    <StackLayout>
+                        <dxf:DataFormView x:Name="dataForm" CommitMode="PropertyChanged" />
+                        <Button
+                            BackgroundColor="#0D2F90"
+                            Clicked="Button_Clicked"
+                            Text="Continuar"
+                            TextColor="White"
+                            VerticalOptions="EndAndExpand" />
+                    </StackLayout>
                 </ScrollView>
             </pk:PancakeView>
-            <StackLayout
+            <!--<StackLayout
                 Grid.Row="2"
                 Grid.RowSpan="1"
                 Margin="0,-70,0,0"
                 Padding="10">
+
                 <ImageButton
                     Padding="10"
                     Aspect="AspectFill"
@@ -105,7 +117,7 @@
                     HorizontalOptions="End"
                     Source="Guardar.png"
                     WidthRequest="60" />
-            </StackLayout>
+            </StackLayout>-->
         </Grid>
     </ContentPage.Content>
 </ContentPage>

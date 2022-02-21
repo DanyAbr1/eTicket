@@ -8,7 +8,7 @@ namespace EticketApp
         public App()
         {
             InitializeComponent();
-
+            DevExpress.XamarinForms.DataForm.Initializer.Init();
             MainPage = new NavigationPage(new HomeView());
         }
 

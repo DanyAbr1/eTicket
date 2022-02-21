@@ -110,6 +110,8 @@ namespace EticketApp.Services
             _mappings.Add(typeof(HomeViewModel), typeof(HomeView));
             _mappings.Add(typeof(MainInformationViewModel), typeof(MainInformationView));
             _mappings.Add(typeof(GeneralInformationViewModel), typeof(GeneralInformationView));
+            _mappings.Add(typeof(MingratorialInformationViewModel), typeof(MigratorialInformationView));
+
 
         }
     }

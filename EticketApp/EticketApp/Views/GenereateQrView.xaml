@@ -26,7 +26,7 @@
             HorizontalOptions="Center" />
 
         <zxing:ZXingBarcodeImageView
-            BarcodeValue="Demo de eTicket"
+            x:Name="qrtxt"
             HeightRequest="500"
             WidthRequest="500">
             <zxing:ZXingBarcodeImageView.BarcodeOptions>
