@@ -16,6 +16,7 @@
                 <Setter Property="Margin" Value="0,15" />
                 <Setter Property="CornerRadius" Value="10" />
                 <Setter Property="Padding" Value="10" />
+                <Setter Property="TextColor" Value="Black"/>
                 <Setter Property="PlaceholderColor" Value="Gray" />
                 <Setter Property="BorderThickness" Value="1" />
                 <Setter Property="BorderColor" Value="#009CFF" />
@@ -59,7 +60,7 @@
                                 Date="01/01/2000"
                                 Format="dd/MM/yyyy"
                                 TextColor="Gray" />
-                            <ctrl:StandardEntry Keyboard="Numeric" Placeholder="Cédula">
+                            <ctrl:StandardEntry Keyboard="Numeric" Placeholder="Cédula" TextColor="Black">
                                 <ctrl:StandardEntry.Behaviors>
                                     <Behavior:MaskedBehavior Mask="XXX-XXXXXXX-X" />
                                     <Behavior:NumberValidationBehavior />
@@ -69,6 +70,7 @@
 
                             <Picker
                                 Title="País de Recidencia"
+                                TextColor="Black"
                                 ItemDisplayBinding="{Binding Name}"
                                 ItemsSource="{Binding Countries}"
                                 SelectedIndexChanged="Picker_SelectedIndexChanged"
@@ -77,15 +79,16 @@
 
                             <Picker
                                 Title="Estado"
+                                TextColor="Black"
                                 ItemDisplayBinding="{Binding Name}"
                                 ItemsSource="{Binding States}"
                                 SelectedItem="{Binding StateSelected}"
                                 TitleColor="Gray" />
 
-                            <ctrl:StandardEntry Keyboard="Numeric" Placeholder="Código Postal" />
+                            <ctrl:StandardEntry TextColor="Black" Keyboard="Numeric" Placeholder="Código Postal" />
                             <StackLayout>
-                                <RadioButton Content="Entrada a la Republica Dominicana" />
-                                <RadioButton Content="Salida de la Republica Dominicana" />
+                                <RadioButton IsChecked="True"  BackgroundColor="White" TextColor="Black" Content="Entrada a la Republica Dominicana" />
+                                <RadioButton BackgroundColor="White" TextColor="Black" Content="Salida de la Republica Dominicana" />
                             </StackLayout>
                         </StackLayout>
                     </Grid>-->
